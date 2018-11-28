@@ -26,4 +26,3 @@ urlpatterns = [
     path('login/', weChat_views.login, name='home'),
 ]
 
-""
