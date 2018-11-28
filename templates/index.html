@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>柠檬-远程控制系统</title>
+    <link href="https://cdn.bootcss.com/weui/1.1.2/style/weui.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.js"></script>
+    {% load staticfiles %}
+</head>
+<body>
+    <div class="weui-tab">
+
+        <div class="weui-tab__bd">
+            <div id="zabbix" class="weui-tab__bd-item">
+                <h1 style="text-align:center;">Zabbix 当前报警</h1>
+                <div class="weui-cells" id="alerts">
+                </div>
+            </div>
+            <div id="service" class="weui-tab__bd-item">
+                <h1>服务页面</h1>
+
+            </div>
+            <div id="mine" class="weui-tab__bd-item weui-tab__bd-item--active" style="text-align:center;">
+                <img src="{{ avatar }}" alt="">
+                <h1>{{ name }}</h1>
+
+            </div>
+        </div>
+
+        <div class="weui-tabbar">
+            <a class="weui-tabbar__item" name="zabbix" href="#zabbix" id="zabbix_info">
+                <div class="weui-tabbar__icon">
+                    <img src="{%static '/images/zabbix.png' %}" alt="">
+                </div>
+                <p class="weui-tabbar__label">Zabbix</p>
+            </a>
+            <a class="weui-tabbar__item" name="service" href="#service">
+                <div class="weui-tabbar__icon">
+                    <img src="{%static '/images/service.png' %}" alt="">
+                </div>
+                <p class="weui-tabbar__label">服务</p>
+            </a>
+            <a class="weui-tabbar__item weui-bar__item--on" name="mine" href="#mine">
+                <div class="weui-tabbar__icon">
+                    <img src="{%static '/images/mine.png' %}" alt="">
+                </div>
+                <p class="weui-tabbar__label">我</p>
+            </a>
+        </div>
+
+    </div>
+    <script>
+        var getZabbixAlerts = function(){
+            $.get('/api/zabbix/', function (res,status) {
+                var data = res.data;
+                console.log(data);
+                var number = $(data).length;
+                $('#alerts').empty();
+                for(var index in data){
+                    var description = data[index]['description'];
+                    var lastvalue = data[index]['lastvalue'];
+                    var hostname = data[index]['hostname'];
+                    var priority = data[index]['priority'];
+
+                    var zabbix_alert_html = `
+                        <div class="weui-cell weui-cell_access" href="javascript:;">
+                            <div class="weui-cell__hd">
+                                <img src="{% static 'images/PR.png' %}" style="width:30px;margin-right:5px;display:block">
+                            </div>
+                            <div class="weui-cell__bd">
+                                <p>HD</p>
+                            </div>
+                            <div class="weui-cell__ft">FT</div>
+                        </div>
+                    `;
+                    zabbix_alert_html = zabbix_alert_html.replace('PR', priority);
+                    zabbix_alert_html = zabbix_alert_html.replace('HD', hostname);
+                    zabbix_alert_html = zabbix_alert_html.replace('FT', description);
+                    $('#alerts').append(zabbix_alert_html);
+                    var alerts_number_html = `
+                        <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">NUM</span>
+                    `;
+                    alerts_number_html = alerts_number_html.replace('NUM', number);
+                    $('#zabbix_info').append(alerts_number_html);
+                }
+            });
+        };
+        $(function () {
+            getZabbixAlerts();
+            var i=0;
+            $(".weui-tabbar a").bind("click", function(e){
+                var name = $(this)[0].name;
+                if(name == 'zabbix'){
+                    getZabbixAlerts();
+                }
+
+            });
+        });
+    </script>
+<style>
+    body, html {
+        height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    }
+
+    .image_ico {
+        width:auto;
+        height:auto;
+        max-width:4%;
+        max-height:4%;
+    }
+</style>
+</body>
+</html>
