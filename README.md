@@ -2,6 +2,8 @@
 
 ### 项目介绍
 基于企业微信、zabbix、ansible的服务器远程操控系统。
+![1](https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/1.jpeg?raw=true)
+![2](https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/1.jpeg?raw=true)
 
 ### 应用场景
 1. zabbix 收到微信报警：tomcat 挂掉了
