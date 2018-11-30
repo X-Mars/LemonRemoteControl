@@ -1,7 +1,8 @@
 # LemonRemoteControl
 
 ### 项目介绍
-基于企业微信、zabbix、ansible的服务器远程操控系统。        
+基于企业微信、zabbix、ansible的服务器远程操控系统。       
+已经完成第一期功能：zabbix报警列表，近期会更新第二期功能：服务器操作。        
 <img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/1.jpeg?raw=true" width="25%" height="25%">
 <img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/2.jpeg?raw=true" width="25%" height="25%">
 
