@@ -55,3 +55,9 @@ python3.6 LemonRemoteControl/manage.py runserver 0.0.0.0:8000
 ```
 
 ##### 打开企业微信访问即可
+
+
+
+License
+---
+[996ICU License](LICENSE)  
