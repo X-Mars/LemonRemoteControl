@@ -6,7 +6,7 @@ cryptography==3.3.2
 Django==2.0.11
 idna==2.7
 pycparser==2.19
-PyJWT==1.6.4
+PyJWT==2.4.0
 pytz==2018.7
 requests==2.20.1
 six==1.11.0
