@@ -5,6 +5,7 @@
 已经完成第一期功能：zabbix报警列表，近期会更新第二期功能：服务器操作。        
 <img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/1.jpeg?raw=true" width="25%" height="25%">
 <img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/2.jpeg?raw=true" width="25%" height="25%">
+<img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/3.jpeg?raw=true" width="25%" height="25%">
 
 ### 应用场景
 1. zabbix 收到微信报警：tomcat 挂掉了
@@ -15,10 +16,6 @@
 和女朋友 刚开始前戏，收到一个zabbix报警，这时候爬起来开电脑，岂不是很扫兴，没准还会被女友骂**没用**。
 
 如果有了柠檬就不一样了，拿起手机，都不用拔出来，动动手指解决问题，继续和女友啪啪。
-
-### 交流群
-
-<img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/images/2.jpg?raw=true" width="40%" height="40%">
 
 ### 使用方法
 
