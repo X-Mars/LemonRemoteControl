@@ -16,6 +16,10 @@
 
 如果有了柠檬就不一样了，拿起手机，都不用拔出来，动动手指解决问题，继续和女友啪啪。
 
+### 交流群
+
+<img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/images/2.jpg?raw=true" width="40%" height="40%">
+
 ### 使用方法
 
 ##### 企业微信相关：
