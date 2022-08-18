@@ -5,7 +5,7 @@
 已经完成第一期功能：zabbix报警列表，近期会更新第二期功能：服务器操作。        
 <img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/1.jpeg?raw=true" width="25%" height="25%">
 <img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/2.jpeg?raw=true" width="25%" height="25%">
-<img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/3.jpeg?raw=true" width="28%" height="28%">
+<img src="https://github.com/X-Mars/LemonRemoteControl/blob/master/preview/3.jpeg?raw=true" width="29%" height="29%">
 
 ### 应用场景
 1. zabbix 收到微信报警：tomcat 挂掉了
